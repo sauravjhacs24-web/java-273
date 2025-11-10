@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-// Base class Account
+
 class Account {
 String customerName;
 int accountNumber;
@@ -27,7 +27,6 @@ System.out.println("Balance = " + balance);
 }
 }
 
-// Savings Account class
 class Sav_acct extends Account {
 
 Sav_acct(String name, int number) {
@@ -35,7 +34,7 @@ super(name, number, "saving");
 }
 
 void computeInterest() {
-double interest = balance * 0.04; // 4% interest rate
+double interest = balance * 0.04; 
 balance += interest;
 System.out.println("Interest added: " + interest + ". Updated balance: " + balance);
 }
@@ -50,7 +49,6 @@ System.out.println("Withdrawn: " + amount + ". Updated balance: " + balance);
 }
 }
 
-// Current Account class
 class Cur_acct extends Account {
 final double minBalance = 500;
 final double serviceCharge = 50;
@@ -71,13 +69,12 @@ if (amount > balance) {
 System.out.println("Insufficient balance!");
 } else {
 balance -= amount;
-checkBalance(); // check after withdrawal
+checkBalance(); 
 System.out.println("Withdrawn: " + amount + ". Updated balance: " + balance);
 }
 }
 }
 
-// Main Bank class
 public class Bank {
 public static void main(String[] args) {
 Scanner sc = new Scanner(System.in);
